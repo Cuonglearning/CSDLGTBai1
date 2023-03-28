@@ -1,0 +1,56 @@
+/*bai 1.6
+da thuc gom co he so va bac da thuc */
+#include<stdio.h>
+#include<conio.h>
+
+struct SoTietKiem
+{
+	char MaSo[5],LoaiTietKiem[10],HoTen[30];
+	long cmnd;
+	int NgayMoSo;
+	float SoTienGui;
+};
+
+typedef struct SoTietKiem SOTIETKIEM;
+void Nhap(SOTIETKIEM &);
+int Xuat(SOTIETKIEM);
+
+void Nhap(SOTIETKIEM &stk)
+{
+	printf("Nhap ma so:");
+	scanf("%c",&stk.MaSo);
+	fflush(stdin);
+	printf("Nhap loai tiet kiem:");
+	scanf("%c",&stk.LoaiTietKiem);
+	fflush(stdin);
+	printf("Nhap ho ten:");
+	scanf("%c",&stk.HoTen);
+	fflush(stdin);
+	printf("Nhap cmnd:");
+	scanf("%d",&stk.cmnd);
+	fflush(stdin);
+	printf("Nhap ngay mo so:");
+	scanf("%d",&stk.NgayMoSo);
+	fflush(stdin);
+	printf("Nhap so tien gui:");
+	scanf("%f",&stk.SoTienGui);
+}
+
+int Xuat(SOTIETKIEM stk)
+{
+	printf("Ma so:%c",stk.MaSo);
+	printf("Loai tiet kiem:%c",stk.LoaiTietKiem);
+	printf("Ma so:%c",stk.HoTen);
+	printf("Ma so:%d",stk.cmnd);
+	printf("Ma so:%d",stk.NgayMoSo);
+	printf("Ma so:%f",stk.SoTienGui);
+}
+
+int main()
+{
+	SOTIETKIEM stk;
+	Nhap(stk);
+	Xuat(stk);
+	getch();
+	return 0;
+}
